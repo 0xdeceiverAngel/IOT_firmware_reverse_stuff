@@ -31,6 +31,23 @@ http://ftp.debian.org/debian/dists/Debian10.13/main/installer-mips/current/image
 qemu-system-mips -M malta -m 512 -hda mips.img -kernel vmlinux-4.19.0-21-4kc-malta -initrd initrd.gz -append "console=ttyS0 nokaslr" -nographic
 ```
 
+
+```text
+https://people.debian.org/~aurel32/qemu/mipsel/
+
+vmlinux-2.6.32-5-4kc-malta
+debian_squeeze_mipsel_standard.qcow2
+
+sudo brctl addbr virbr0 
+sudo ifconfig virbr0 192.168.122.1/24 up
+sudo tunctl -t tap0 
+sudo ifconfig tap0 192.168.122.11/24 up 
+sudo brctl addif virbr0 tap0
+
+sudo qemu-system-mipsel -M malta -kernel vmlinux-2.6.32-5-4kc-malta -hda debian_squeeze_mipsel_standard.qcow2 -append "root=/dev/sda1 console=tty0" -net nic -net tap,ifname=tap0,script=no,downscript=no -nographic
+```
+
+
 # Another method
 
 Instead use prebuild image, install debian in qemu by self

