@@ -33,7 +33,7 @@ Todo list
 Status
 - ❌ : not try yet
 - ⭕ : already tried 
-- ❓ : tried but fail
+- 😭: tried but fail
 
 Software 
 - Install ubuntu in qemu arm,mips ⭕
