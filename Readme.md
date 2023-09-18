@@ -28,6 +28,11 @@ Todo list
 - https://github.com/fkie-cad/awesome-embedded-and-iot-security
 - https://conference.hitb.org/hitblockdown002/materials/D1%20VIRTUAL%20LAB%20-%20Qiling%20Framework%20-%20Kaijern%20Lau.pdf
 - QEMU network setting
+- rtos VxWorks firmware symbol table fix
+	- https://tttang.com/archive/1418/
+- endpoint interact bypass restrict
+	- https://tttang.com/archive/507/
+	
 
 
 Status
