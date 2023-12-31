@@ -15,8 +15,6 @@ Summarize
 	- CVE-2020-8962
 	- TP-Link SR20
 	- Vivotek cc8160
-- Vulnerabilities Mining
-	- DIR-524 xss
 
 Todo list
 - https://hackmd.io/@doggy33
