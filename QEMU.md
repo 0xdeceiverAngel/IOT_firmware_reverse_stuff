@@ -4,6 +4,7 @@ Ref
 - https://blog.csdn.net/weixin_51760563/article/details/119935101
 - https://www.cnblogs.com/tangtangworld/p/14157558.html
 - https://blog.csdn.net/weixin_43194921/article/details/104702724
+- https://www.slideshare.net/ChiaweiWang3/qemu-introduction
 
 # arm
 ```
