@@ -116,6 +116,29 @@ dictionary，把自动生成或用户提供的token替换/插入到原文件中
 havoc，中文意思是“大破坏”，此阶段会对原文件进行大量变异，具体见下文
 splice，中文意思是“绞接”，此阶段会将两个文件拼接起来得到一个新的文件
 
+
+# source code 
+
+- afl-gcc 包裝 gcc
+- afl-as wiil add instrument
+    - 沒在 source code level 做？，as 層做如果遇到跨架構？
+    - 大致涵蓋所有 basic block 以及 main function 的開頭
+    - 插入 `trampoline_fmt_64` 就是一段 shellcode ，會去呼叫 `__afl_maybe_log`
+    - `__afl_maybe_log` 會去跟會去跟 fuzzer 利用 pipe 交握，利用 fork 執行後續，等子結束，父會將記錄資料存在 shared memory 
+- fuzzer main 
+    - fuzz_one()
+- init_forkserver() 在 main() 初始化時會被間接呼叫到。首先會建立用於跟 child 溝通的 pipe，然後由 child 執行 target
+- fuzz_one() 在校正完 input 後，會準備開始執行 mutation，不過在此之前還會先將 input 做修剪 (trim)，刪除 input 當中不必要的部分
+- Trimming 的目的為在不影響 coverage 的情況下，將 input 大小縮小以減少 overhead，舉例來說，如果 input "AAAABBBBCCCC" 與 "AAAACCCC" 所產生的 coverage 相同，則會將 "AAAABBBBCCCC" trim 成 "AAAACCCC"。
+
+
+
+溝通透過
+>Target 由 fuzzer 透過 fork() 與 execve() 執行，而 fuzzer 在執行 target 前會建立一組 pipe (fd 為 198, 199)，這樣兩者就能透過讀寫 pipe 來做溝通
+
+
+![](https://ithelp.ithome.com.tw/upload/images/20220912/20151153nnfUGFw4Ep.png)
+
 # TODO
 - hardness
 - parallel fuzzing

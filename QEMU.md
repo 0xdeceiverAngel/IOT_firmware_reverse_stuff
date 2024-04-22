@@ -52,3 +52,20 @@ sudo qemu-system-mipsel -M malta -kernel vmlinux-2.6.32-5-4kc-malta -hda debian_
 # Another method
 
 Instead use prebuild image, install debian in qemu by self
+
+
+
+# Emulating peripherals
+
+ref
+- https://zhuanlan.zhihu.com/p/57526565
+- https://sdn.0voice.com/?id=804
+- https://sdn.0voice.com/?id=782
+- https://airbus-seclab.github.io/qemu_blog/devices.html
+- https://medium.com/@matanbach44/hello-world-device-in-qemu-ae69b02872f4
+
+
+>Qemu中有各种各样的实现方式，比如基于qemu.ko的，基于TCG（翻译执行），或者基于KVM的
+>一个设备驱动类似一个Linux内核的LKM，通过type_init(type_init_function)定义
+
+要寫好 code 並編譯到 qemu 中(?)，如何 debug ??? 
